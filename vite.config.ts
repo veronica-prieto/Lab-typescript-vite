@@ -3,6 +3,7 @@ import path from 'path'
 
 export default defineConfig({
   root: 'src',
+  base: './',
   build: {
     outDir: '../dist',
     emptyOutDir: true,
@@ -10,7 +11,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src')
+      '@': path.resolve(import.meta.dirname, 'src')
     }
   }
 })
